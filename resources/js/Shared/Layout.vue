@@ -6,7 +6,12 @@ import Nav from "@/Shared/Nav.vue";
 <template>
 	<section class="p-6 dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent">
 		<header class="flex justify-between">
-			<h1 class="font-bold text-lg">My app</h1>
+			<div class="flex items-center">
+				<h1 class="font-bold text-lg">My app</h1>
+				<p class="text-sm ml-2">
+					Welcome back, {{ $page.props.auth.user.username }}
+				</p>
+			</div>
 			<Nav/>
 		</header>
 	</section>
