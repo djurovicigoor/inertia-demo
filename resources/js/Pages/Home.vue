@@ -1,12 +1,15 @@
-<script setup>
+<script>
 import Layout from "@/Shared/Layout.vue";
+
+export default {layout: Layout};
+</script>
+<script setup>
 
 defineProps({
 	name: String,
 	frameworks: Array
 });
 </script>
-
 <template>
 	<Layout>
 		<h2 class="text-xl font-semibold">Home view</h2>

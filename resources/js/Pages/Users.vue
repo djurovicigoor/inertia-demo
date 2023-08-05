@@ -1,7 +1,8 @@
-<script setup>
+<script>
 import Layout from "@/Shared/Layout.vue";
-</script>
 
+export default {layout: Layout};
+</script>
 <template>
 	<Layout>
 		<h2 class="text-xl font-semibold">Users view</h2>
