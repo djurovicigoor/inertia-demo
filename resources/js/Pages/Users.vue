@@ -1,6 +1,11 @@
 <script setup>
 
 import Nav from "@/Shared/Nav.vue";
+import {Link} from "@inertiajs/vue3";
+
+defineProps({
+	time: String
+})
 </script>
 
 <template>
@@ -11,6 +16,11 @@ import Nav from "@/Shared/Nav.vue";
 				<Nav></Nav>
 			</div>
 		</div>
+		
+		<div style="margin-top: 600px">
+			<p>The current time is: {{ time }}</p>
+		</div>
+		<Link href="/users" preserve-scroll>Refresh</Link>
 	</div>
 
 </template>
