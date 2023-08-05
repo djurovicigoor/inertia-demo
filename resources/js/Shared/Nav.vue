@@ -1,22 +1,19 @@
 <script setup>
 
-import {Link} from "@inertiajs/vue3";
+import NavLink from "@/Shared/NavLink.vue";
 </script>
 
 <template>
 	<nav>
 		<ul>
 			<li>
-				<Link class="hover:underline" href="/">Home</Link>
+				<NavLink :active="$page.component === 'Home'" href="/">Home</NavLink>
 			</li>
 			<li>
-				<Link class="hover:underline" href="/users">Users</Link>
+				<NavLink :active="$page.component === 'Users'" href="/users">Users</NavLink>
 			</li>
 			<li>
-				<Link class="hover:underline" href="/settings">Settings</Link>
-			</li>
-			<li>
-				<Link as="button" class="hover:underline mt-4" href="/logout" method="post">Log Out</Link>
+				<NavLink :active="$page.component === 'Settings'" href="/settings">Settings</NavLink>
 			</li>
 		</ul>
 	</nav>
