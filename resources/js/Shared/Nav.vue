@@ -7,13 +7,16 @@ import {Link} from "@inertiajs/vue3";
 	<nav>
 		<ul>
 			<li>
-				<Link href="/">Home</Link>
+				<Link class="hover:underline" href="/">Home</Link>
 			</li>
 			<li>
-				<Link href="/users">Users</Link>
+				<Link class="hover:underline" href="/users">Users</Link>
 			</li>
 			<li>
-				<Link href="/settings">Settings</Link>
+				<Link class="hover:underline" href="/settings">Settings</Link>
+			</li>
+			<li>
+				<Link as="button" class="hover:underline mt-4" href="/logout" method="post">Log Out</Link>
 			</li>
 		</ul>
 	</nav>
