@@ -3,10 +3,20 @@
 import Layout from "@/Shared/Layout.vue";
 import {Link} from "@inertiajs/vue3";
 import Pagination from "@/Shared/Pagination.vue";
+import {ref, watch} from "vue";
+import {Inertia} from '@inertiajs/inertia'
 
-defineProps({
-	users: Object
+let props = defineProps({
+	users: Object,
+	filters: Object
 })
+let search = ref(props.filters.search);
+watch(search, value => {
+	Inertia.get('/users', {search: value}, {
+		preserveState: false,
+		replace: true
+	});
+});
 </script>
 <template>
 	<Layout>
@@ -14,6 +24,10 @@ defineProps({
 		<div class="bg-gray-900">
 			<div class="mx-auto max-w-7xl">
 				<div class="bg-gray-900 py-10">
+					<div class="flex justify-between mb-6">
+						<h1 class="text-3xl">Users</h1>
+						<input v-model="search" class="border px-2 border-lg text-black" placeholder="Search..." type="text">
+					</div>
 					<div class="px-4 sm:px-6 lg:px-8">
 						<div class="mt-8 flow-root">
 							<div class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
