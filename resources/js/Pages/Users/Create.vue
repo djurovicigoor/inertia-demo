@@ -1,7 +1,6 @@
 <script setup>
 import Layout from "@/Shared/Layout.vue";
-import {useForm} from "@inertiajs/vue3";
-
+import {useForm} from '@inertiajs/inertia-vue3';
 
 let form = useForm({
 	name: '',

@@ -15,6 +15,9 @@ import NavLink from "@/Shared/NavLink.vue";
 			<li>
 				<NavLink :active="$page.component === 'Settings'" href="/settings">Settings</NavLink>
 			</li>
+			<li>
+				<NavLink as="button" href="/logout" method="post">Logout</NavLink>
+			</li>
 		</ul>
 	</nav>
 </template>
