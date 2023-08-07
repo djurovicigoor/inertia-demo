@@ -20,12 +20,15 @@ watch(search, value => {
 </script>
 <template>
 	<Layout>
-		<Link v-if="false"/>
 		<div class="bg-gray-900">
 			<div class="mx-auto max-w-7xl">
 				<div class="bg-gray-900 py-10">
 					<div class="flex justify-between mb-6">
-						<h1 class="text-3xl">Users</h1>
+						<div class="flex items-center">
+							<h1 class="text-3xl">Users</h1>
+							<Link class="text-gray-100 text-sm ml-2" href="/users/create">New user</Link>
+						
+						</div>
 						<input v-model="search" class="border px-2 border-lg text-black" placeholder="Search..." type="text">
 					</div>
 					<div class="px-4 sm:px-6 lg:px-8">
